@@ -1,0 +1,21 @@
+/* external css (외부 css) : css파일에 스타일 코드 작성 */
+/* css 주석 */
+
+        h1
+        {
+            position: relative; left: 35%;
+            color: greenyellow;
+        }
+        p
+        {
+            position: relative; top :0px;
+            color: gold ;
+        }
+        h2
+        {
+            color: white;
+        }
+        body
+        {
+            background-color: black;
+        }
