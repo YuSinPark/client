@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        [title]{
+            color: blue;
+        }
+        /* title속성의 값이 hello인 요소들 */
+        [title="hello"]{
+            background-color: gold;
+        }
+        /* title 속성의 값이 world인 요소들의 배경을 초콜릿으로 */
+        [title=world]{
+            background-color: chocolate;
+        }
+        [title~="hoe"]{
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <h1 title="hello">Lorem.</h1>
+    <h1 title="world">Possimus.</h1>
+    <h1 title="hey hoe his">Quisquam!</h1>
+    <h1>Labore?</h1>
+    <h1>Sit.</h1>
+</body>
+</html>
