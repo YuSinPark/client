@@ -9,33 +9,27 @@
     </style>
 </head>
 <body>
-    <!-- input#input1+ul#list1 -->
-    <input type="text" id="input1" onkeyup="addList(event);">
-    <ul id="list1"></ul>
-    <input type="text" id="input2" onkeyup="addList(event);">
-    <ul id="list2"></ul>
-
+    <!-- h1>lorem1^p>lorem -->
+    <h1>
+        Lorem.
+    </h1>
+    <p style="display: none;">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non beatae fugiat eius debitis laboriosam, odit accusantium, eveniet animi repudiandae sint corporis ullam quasi quas ut! Quaerat laborum doloremque nemo veritatis!
+    </p>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js" integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-    // 14과 유사한 일
-    // 버튼 삭제하고
-    // 텍스트 필드에서 엔터 입력시 목록에 추가 되도록..
-    function addList(e) {
-            let inputElem = document.querySelector("#input1")
-            let text = inputElem.value;
-            let li = document.createElement("li");
-            li.textContent = text;
-            if (e.key === "Enter"&&inputElem.value!=""){
-            document.querySelector("#list1").append(li);
-            inputElem.value = "";
-            }else if (e.key === "Enter"){
-                text=document.querySelector("#input2").value;
-            li.textContent = text;
-            document.querySelector("#list2").append(li);
-            inputElem.value = "";
-            }
+        // h1요소에 마우스 포인터 들어가면
+        // p 요소가 보이게
+        // h1요소에서 마우스 포인터 떠나면
+        // p 요소가 숨겨지게
 
-    }
+        $("h1").hover(function() {
+            $("p").slideDown("fast");
+        }, function() {
+            $("p").slideUp("fast");
+        });
+
     </script>
 </body>
 </html>

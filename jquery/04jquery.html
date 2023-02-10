@@ -9,36 +9,38 @@
     </style>
 </head>
 <body>
-    <!-- input#input1+ul#list1 -->
-    <input type="text" id="input1">
-    <ul id="list1"></ul>
-
-    <hr>
-    <!-- input#input2+ul#list2 -->
-    <input type="text" id="input2">
-    <ul id="list2"></ul>
+    <!-- h1#head$*3>lorem1^p#para$*3>lorem -->
+    <h1 id="head1">
+        Lorem.
+    </h1>
+    <h1 id="head2">
+        Aperiam!
+    </h1>
+    <h1 id="head3">
+        Cumque!
+    </h1>
+    <p id="para1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam illo doloribus minima, sapiente debitis, nostrum, delectus porro minus natus esse accusamus ipsum at deserunt qui doloremque voluptas quod quas harum.
+    </p>
+    <p id="para2">
+        Esse illo officiis libero quaerat eaque quasi perspiciatis ut id veniam dolores quod, deleniti dolore temporibus quisquam minus maxime repellendus quo? Aliquam facere assumenda corrupti distinctio molestiae hic maiores soluta!
+    </p>
+    <p id="para3">
+        Ea quo quos, eligendi velit quas placeat illum perferendis accusamus? Expedita sint quos suscipit! Quis repudiandae voluptatibus ducimus autem doloremque magnam quasi voluptatem. Atque eum accusamus blanditiis! Obcaecati, possimus perferendis!
+    </p>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js" integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-        // jquery
-        $("#input2").keyup(function(e)
-        {
-            if(e.key==="Enter")
-            {
-                $("#list2").append(`<li>${$(this).val()}</li>`);
-                $this.val(" ");
-            }
-        });
-    //보통의 자바스크립트 코드(vanilla javascript)
-    document.querySelector("#input1").addEventListener("keyup", function(e) {
-        if (e.key === "Enter") {
-            let li = document.createElement("li");
-            li.textContent = this.value;
-            document.querySelector("#list1").append(li);
-            this.value = "";
-        }
-    });
+    $("#head1").hide(3000);
+    $("p").hide(5000);
+
+    // vanilla js
+    let paras = document.querySelectorAll("p");
+    for (let i = 0; i < paras.length; i++) {
+        paras[i].style = {display: "none"};
+    }
+
     </script>
 </body>
 </html>
